@@ -13,6 +13,10 @@ let package = Package(
         .library(
             name: "EasyTipView",
             targets: ["EasyTipView"]),
+        .library(
+            name: "EasyTipView-Dynamic",
+            type: .dynamic,
+            targets: ["EasyTipView"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -23,11 +27,9 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "EasyTipView",
-            dependencies: [],
-            exclude: ["assets", "Example", "Source"]),
+            dependencies: []),
         .testTarget(
             name: "EasyTipViewTests",
-            dependencies: ["EasyTipView"],
-            exclude: ["assets", "Example", "Source"]),
+            dependencies: ["EasyTipView"]),
     ]
 )

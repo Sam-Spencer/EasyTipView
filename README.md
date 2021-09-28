@@ -38,6 +38,13 @@ Description
 <a name="installation"> Installation </a>
 --------------
 
+### Swift Package Manager
+Swift Package Manager is built into Xcode and allows you to quickly and easily load package dependencies in Xcode projects. Add this package using the following:
+
+```
+https://github.com/Sam-Spencer/EasyTipView.git
+```
+
 ### CocoaPods
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects.
@@ -120,7 +127,7 @@ preferences: preferences,
 delegate: self)
 ```
 
-**Note that if you set the** ```EasyTipView.globalPreferences```**, you can ommit the** ```preferences``` **parameter in all calls. Additionally, you can also ommit the** ``withinSuperview`` **parameter and the** ``EasyTipView`` **will be shown within the main application window**.
+**Note that if you set the** ```EasyTipView.globalPreferences```**, you can omit the** ```preferences``` **parameter in all calls. Additionally, you can also omit the** ``withinSuperview`` **parameter and the** ``EasyTipView`` **will be shown within the main application window**.
 
 *Alternatively, if you want to dismiss the ``EasyTipView`` programmatically later on, you can use one of the instance methods:*
 
@@ -135,7 +142,7 @@ tipView.dismiss()
 <a name="customising"> Customizing the appearance </a>
 --------------
 In order to customize the `EasyTipView` appearance and behavior, you can play with the `Preferences` structure which encapsulates all the customizable properties of the ``EasyTipView``. These preferences have been split into three structures:
-* ```Drawing``` - encapsulates customizable properties specifying how ```EastTipView``` will be drawn on screen.
+* ```Drawing``` - encapsulates customizable properties specifying how ```EasyTipView``` will be drawn on screen.
 * ```Positioning``` - encapsulates customizable properties specifying where ```EasyTipView``` will be drawn within its own bounds.
 * ```Animating``` - encapsulates customizable properties specifying how ```EasyTipView``` will animate on and off screen.
 

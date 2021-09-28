@@ -12,12 +12,14 @@ import UIKit
 // MARK: - UIBarItem extension -
 
 extension UIBarItem {
+    
     var view: UIView? {
         if let item = self as? UIBarButtonItem, let customView = item.customView {
             return customView
         }
         return self.value(forKey: "view") as? UIView
     }
+    
 }
 
 // MARK:- UIView extension -
@@ -35,15 +37,17 @@ extension UIView {
             } else{
                 return viewHasSuperview(sview, superview: superview)
             }
-        } else{
+        } else {
             return false
         }
     }
+    
 }
 
 // MARK:- CGRect extension -
 
 extension CGRect {
+    
     var x: CGFloat {
         get {
             return self.origin.x
@@ -66,5 +70,6 @@ extension CGRect {
     var center: CGPoint {
         return CGPoint(x: self.x + self.width / 2, y: self.y + self.height / 2)
     }
+    
 }
 #endif
